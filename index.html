@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piczo Princess</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              pixel: ['"VT323"', 'monospace'],
+              cute: ['"Quicksand"', 'sans-serif'],
+            },
+            colors: {
+              neon: {
+                pink: '#ff6ec7',
+                blue: '#00f3ff',
+                purple: '#bc13fe',
+                green: '#ccff00',
+              },
+              pastel: {
+                pink: '#fce7f3',
+                blue: '#dbeafe',
+                purple: '#f3e8ff',
+              }
+            },
+            boxShadow: {
+              'neon-pink': '0 0 5px #ff6ec7, 0 0 10px #ff6ec7, 0 0 20px #ff6ec7',
+              'neon-blue': '0 0 5px #00f3ff, 0 0 10px #00f3ff',
+              'soft-glow': '0 4px 20px rgba(255, 110, 199, 0.3)',
+            },
+            animation: {
+              'float': 'float 3s ease-in-out infinite',
+              'twinkle': 'twinkle 2s ease-in-out infinite',
+              'pulse-glow': 'pulse-glow 2s infinite',
+              'rainbow': 'rainbow 3s linear infinite',
+              'profile-float': 'profile-float 4s ease-in-out infinite',
+              'hue-rotate': 'hue-rotate 3s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              twinkle: {
+                '0%, 100%': { opacity: 1, transform: 'scale(1)' },
+                '50%': { opacity: 0.4, transform: 'scale(0.8)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { boxShadow: '0 0 5px #ff6ec7' },
+                '50%': { boxShadow: '0 0 20px #ff6ec7' },
+              },
+              rainbow: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '100%': { backgroundPosition: '200% 50%' },
+              },
+              'profile-float': {
+                '0%, 100%': { transform: 'translateY(0) scale(1)', filter: 'brightness(1)' },
+                '50%': { transform: 'translateY(-10px) scale(1.05)', filter: 'brightness(1.1)' },
+              },
+              'hue-rotate': {
+                '0%': { filter: 'hue-rotate(0deg)' },
+                '100%': { filter: 'hue-rotate(360deg)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fdf2f8;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fce7f3; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f472b6; 
+        border-radius: 6px;
+        border: 3px solid #fce7f3;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #db2777; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
